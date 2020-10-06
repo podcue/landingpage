@@ -17,6 +17,7 @@ jobs:
       - name: npm install and build
         run: |
           npm install
+          echo "podcue.co" > CNAME
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
