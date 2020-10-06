@@ -26,7 +26,7 @@
     "watch:js": "onchange \"src/js\" -- run-s build:js",
     "watch:images": "onchange \"src/images\" -- run-s build:images",
     "watch": "run-p serve watch:*",
-    "postinstall": "run-s build watch && node ./node_modules/husky/lib/installer/bin install",
+    "postinstall": "run-s build",
     "deploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
   },
   "devDependencies": {
@@ -38,7 +38,6 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
-    "husky": "^4.3.0",
     "imagemin-cli": "^3.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.9.2",
